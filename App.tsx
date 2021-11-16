@@ -1,12 +1,16 @@
 import { StatusBar } from 'expo-status-bar'
-import React from 'react'
+import * as React from 'react'
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
 
-import LandingScreen from './src/screens/LandingScreen';
+import ThemeContextProvider from './src/contexts/ThemeContext'
+import LandingScreen from './src/screens/LandingScreen'
+
 
 export default function App() {
   return (
-        <LandingScreen />
+    <ThemeContextProvider>
+      <LandingScreen />
+    </ThemeContextProvider>
   )
 }
 

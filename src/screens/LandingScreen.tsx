@@ -1,14 +1,19 @@
-import React from 'react'
+import * as React from 'react'
 import {View, Text, StyleSheet} from 'react-native'
+import { Colors } from 'react-native/Libraries/NewAppScreen'
+import { ThemeContext } from 'react-navigation'
 
-const LandingScreen = () => {
+import { theme } from '../styles/theme'
+const { colors, spacing, textVariants } = theme
+
+const LandingScreen: React.FC = () => {
   return (
     <View style={styles.container}>
       <View style={styles.navigation}>
         <Text>Navigation</Text>
       </View>
       <View style={styles.body}>
-        <Text >This is the Landing Screen</Text>
+        <Text >Landing Screen</Text>
       </View>
       <View style={styles.footer}>
         <Text>Footer</Text>
@@ -24,17 +29,17 @@ const styles = StyleSheet.create({
   },
   navigation: {
     flex: 1,
-    backgroundColor: 'red',
+    backgroundColor: `${colors.header}`,
   },
   body: {
     flex:9,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'yellow',
+    backgroundColor: `${colors.body}`,
   },
   footer: {
     flex: 1,
-    backgroundColor: 'cyan'
+    backgroundColor: `${colors.footer}`,
   }
 })
 

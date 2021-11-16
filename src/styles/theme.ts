@@ -1,55 +1,18 @@
-// types object for theme
+//  start the theme object code
+import { StyleGuide, Palette } from '../types/styles'
 
-export type Palette = {
-  purple: string,
-  green: string,
-  red: string,
-  black: string,
-  white: string,
-}
-
-interface Theme {
-  colors: {
-    background: string,
-    foreground: string,
-    primary: string,
-    success: string,
-    danger: string,
-    failure: string,
-  },
-  spacing: {
-    s: number,
-    m: number,
-    l: number,
-    xl: number,
-  },
-  textVariants: {
-    header: {
-      fontFamily: string,
-      fontSize: number,
-      fontWeight: string,
-    },
-    body: {
-      fontFamily: string,
-      fontSize: number,
-    },
-  }
-}[] //  remove the array symbol
-
-
-//  export type StyleGuide = Theme[]
-
-//  import { StyleGuide, Palate } from '../types'
-
-const palette: Palate = {
+const palette: Palette = {
   purple: '#5A31F4',
   green: '#0ECD9D',
-  red: '#CD0E61',
+  red: '#E40C2B',
   black: '#0B0B0B',
   white: '#F0F2F3',
+  lightblue: '#9CF6FB',
+  magenta: '#161F6D',
+  grey: '#7DA2A9',
 }
 
-export const theme: Theme = {
+export const theme: StyleGuide = {
   colors: {
     background: palette.white,
     foreground: palette.black,
@@ -57,6 +20,9 @@ export const theme: Theme = {
     success: palette.green,
     danger: palette.red,
     failure: palette.red,
+    header: palette.lightblue,
+    footer: palette.magenta,
+    body: palette.grey,
   },
   spacing: {
     s: 8,
@@ -83,5 +49,26 @@ export const darkTheme = {
     ...theme.colors,
     background: palette.black,
     foreground: palette.white,
+  }
+}
+
+export const LandingPage = {
+  container: {
+    flex: 1,
+    backgroundColor: 'green',
+  },
+  navigation: {
+    flex: 1,
+    backgroundColor: palette.lightblue,
+  },
+  body: {
+    flex:9,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: palette.grey,
+  },
+  footer: {
+    flex: 1,
+    backgroundColor: palette.magenta,
   }
 }
