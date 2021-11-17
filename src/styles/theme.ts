@@ -70,5 +70,9 @@ export const LandingPage = {
   footer: {
     flex: 1,
     backgroundColor: palette.magenta,
+  },
+  header: {
+    fontSize: 24,
+    fontWeight: 'bold',
   }
 }

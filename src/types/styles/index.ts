@@ -61,6 +61,10 @@ interface LandingPage {
   footer: {
     flex: number,
     backgroundColor: string,
+  },
+  header: {
+    fontSize: number,
+    fontWeight: string,
   }
 }
 
@@ -70,4 +74,4 @@ interface AuxProps {
 
 export type StyleGuide = Theme
 export type Landing = LandingPage
-export type Child = AuxProps
+export type Children = AuxProps

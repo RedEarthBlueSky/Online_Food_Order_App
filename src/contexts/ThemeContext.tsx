@@ -7,7 +7,7 @@ import React,
   ReactChildren
 } from 'react'
 
-import { theme, darkTheme, LandingPage } from '../styles/theme'
+// import { theme, darkTheme, LandingPage } from '../styles/theme'
 import { Children } from '../types/styles'
 
 const ThemeContext = createContext<string | null>(null)
